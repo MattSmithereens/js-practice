@@ -1,4 +1,4 @@
-// quiz #1
+// quiz #1, Basic Operators
 
 // let johnHeight = 1.78;
 // let johnWeight = 82;
@@ -15,19 +15,19 @@
 
 // console.log("is John's BMI higher than Mark's? " + johnBiggerThanMark);
 
-// quiz #2
+// quiz #2, Equality Operators
 
-let johnScores = [89, 120, 103];
-let mikeScores = [116, 94, 123];
+let johnScores = [91, 120, 103];
+let mikeScores = [117, 100, 123];
 let maryScores = [94, 134, 105];
 
 function getSum(total, num) {
   return total + num;
 }
 
-let johnAvg = (johnScores.reduce(getSum)) / 3;
-let mikeAvg = (mikeScores.reduce(getSum)) / 3;
-let maryAvg = (maryScores.reduce(getSum)) / 3;
+let johnAvg = Math.floor((johnScores.reduce(getSum)) / 3);
+let mikeAvg = Math.floor((mikeScores.reduce(getSum)) / 3);
+let maryAvg = Math.floor((maryScores.reduce(getSum)) / 3);
 
 //console.log('John = ' + johnAvg + "Mike = " + mikeAvg + 'Mary = ' + maryAvg);
 
