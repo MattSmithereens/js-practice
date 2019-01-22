@@ -17,26 +17,48 @@
 
 // quiz #2, Equality Operators
 
-let johnScores = [91, 120, 103];
-let mikeScores = [117, 100, 123];
-let maryScores = [94, 134, 105];
+// let johnScores = [91, 120, 103];
+// let mikeScores = [117, 100, 123];
+// let maryScores = [94, 134, 105];
 
-function getSum(total, num) {
-  return total + num;
+// function getSum(total, num) {
+//   return total + num;
+// }
+
+// let johnAvg = Math.floor((johnScores.reduce(getSum)) / 3);
+// let mikeAvg = Math.floor((mikeScores.reduce(getSum)) / 3);
+// let maryAvg = Math.floor((maryScores.reduce(getSum)) / 3);
+
+// //console.log('John = ' + johnAvg + "Mike = " + mikeAvg + 'Mary = ' + maryAvg);
+
+// if (johnAvg > mikeAvg && johnAvg > maryAvg) {
+//   console.log('John is the winner with a score of ' + johnAvg);
+// } else if (mikeAvg > johnAvg && mikeAvg > maryAvg) {
+//   console.log('Mike is the winner with a score of ' + mikeAvg);
+// } else if (maryAvg > johnAvg && maryAvg > mikeAvg) {
+//   console.log('Mary is the winner with a score of ' + maryAvg);
+// } else {
+//   console.log('there appears to be a tie.  The scores are: John: ' + johnAvg + ', Mike: ' + mikeAvg + ', Mary ' + maryAvg);
+// }
+
+function calculateAge(birthYear) {
+  return 2019 - birthYear;
 }
 
-let johnAvg = Math.floor((johnScores.reduce(getSum)) / 3);
-let mikeAvg = Math.floor((mikeScores.reduce(getSum)) / 3);
-let maryAvg = Math.floor((maryScores.reduce(getSum)) / 3);
+// let ageMatt = calculateAge(1975);
+// let ageCoco = calculateAge(1977);
+// console.log(ageMatt + ", " + ageCoco);
 
-//console.log('John = ' + johnAvg + "Mike = " + mikeAvg + 'Mary = ' + maryAvg);
+function yearsUntilRetirement(year, firstName) {
+  let age = calculateAge(year);
+  let retirement = 65 - age;
+  if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+  } else {
+    console.log('Why is ' + firstName + ' still working?');
+  }
 
-if (johnAvg > mikeAvg && johnAvg > maryAvg) {
-  console.log('John is the winner with a score of ' + johnAvg);
-} else if (mikeAvg > johnAvg && mikeAvg > maryAvg) {
-  console.log('Mike is the winner with a score of ' + mikeAvg);
-} else if (maryAvg > johnAvg && maryAvg > mikeAvg) {
-  console.log('Mary is the winner with a score of ' + maryAvg);
-} else {
-  console.log('there appears to be a tie.  The scores are: John: ' + johnAvg + ', Mike: ' + mikeAvg + ', Mary ' + maryAvg);
 }
+
+yearsUntilRetirement(1975, 'Matt');
+yearsUntilRetirement(1945, 'Pete');
