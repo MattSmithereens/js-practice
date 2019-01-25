@@ -109,9 +109,10 @@ let calculateTip = function (bill) {          //initialize function and pass bil
 
 let bills = [124, 48, 268];                   //initialize bill array
 let tips = [
-  calculateTip(bills[0]),
-  calculateTip(bills[1]),
-  calculateTip(bills[2])];
+  parseFloat(calculateTip(bills[0]).toFixed(2)),
+  parseFloat(calculateTip(bills[1]).toFixed(2)),
+  parseFloat(calculateTip(bills[2]).toFixed(2))];
+
 let totalBill = [
   bills[0] + calculateTip(bills[0]),
   bills[1] + calculateTip(bills[1]),
