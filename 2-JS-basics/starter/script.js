@@ -93,35 +93,83 @@
 
 // Coding Challenge #3
 
-let calculateTip = function (bill) {          //initialize function and pass bill argument//
-  let percentage;                             //initialize percentage variable
-  if (bill > 0 && bill <= 50) {
-    percentage = .2;
-  } else if (bill > 50 && bill < 200) {
-    percentage = .15;
-  } else if (bill >= 200) {
-    percentage = .1;
-  } else {
-    alert('nope');
+// let calculateTip = function (bill) {          //initialize function and pass bill argument//
+//   let percentage;                             //initialize percentage variable
+//   if (bill > 0 && bill <= 50) {
+//     percentage = .2;
+//   } else if (bill > 50 && bill < 200) {
+//     percentage = .15;
+//   } else if (bill >= 200) {
+//     percentage = .1;
+//   } else {
+//     alert('nope');
+//   }
+//   return bill * percentage;
+// }
+
+// let bills = [124, 48, 268];                   //initialize bill array
+// let tips = [
+//   parseFloat(calculateTip(bills[0]).toFixed(2)),
+//   parseFloat(calculateTip(bills[1]).toFixed(2)),
+//   parseFloat(calculateTip(bills[2]).toFixed(2))];
+
+// let totalBill = [
+//   bills[0] + calculateTip(bills[0]),
+//   bills[1] + calculateTip(bills[1]),
+//   bills[2] + calculateTip(bills[2])];
+
+// console.log(tips);
+// console.log(totalBill);
+
+// object literal
+// let john = {
+//   firstName: 'john',
+//   lastName: 'Smith',
+//   birthYear: 1990,
+//   family: ['Jane', 'Mark', 'Bob'],
+//   job: 'teacher',
+//   isMarried: false,
+//   age: function (birthYear) {
+//     this.age = 2019 - this.birthYear;
+//   }
+// };
+
+// const thisYear = new Date();
+// console.log(thisYear.getFullYear() - john.birthYear);
+
+//Quiz #4: objects
+
+let John = {
+  first: 'John',
+  last: 'Holmes',
+  height: 1.78,
+  weight: 82,
+  fakeBMI: 28,
+  bmi: function () {
+    return this.weight / (this.height * this.height);
   }
-  return bill * percentage;
+};
+
+let Mark = {
+  first: 'Marky',
+  last: 'Mark',
+  height: 1.84,
+  weight: 90,
+  fakeBMI: 29,
+  bmi: function () {
+    return this.weight / (this.height * this.height);
+  }
+};
+
+let BMICompare = function () {
+  if (John.bmi() > Mark.bmi()) {
+    return John.first + '' + John.last + ' has a larger BMI since his is ' + John.bmi();
+  }
+  else {
+    return Mark.first + '' + Mark.last + ' has a larger BMI since his is ' + Mark.bmi();
+  }
 }
 
-let bills = [124, 48, 268];                   //initialize bill array
-let tips = [
-  parseFloat(calculateTip(bills[0]).toFixed(2)),
-  parseFloat(calculateTip(bills[1]).toFixed(2)),
-  parseFloat(calculateTip(bills[2]).toFixed(2))];
-
-let totalBill = [
-  bills[0] + calculateTip(bills[0]),
-  bills[1] + calculateTip(bills[1]),
-  bills[2] + calculateTip(bills[2])];
-
-console.log(tips);
-console.log(totalBill);
-
-
-
-// console.log(calculate(124));
-// console.log(calculate(268));
+console.log('John BMI ' + John.bmi());
+console.log('Mark BMI ' + Mark.bmi());
+console.log(BMICompare(John, Mark));
