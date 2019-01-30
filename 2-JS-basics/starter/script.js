@@ -146,7 +146,7 @@ let John = {
   weight: 82,
   fakeBMI: 28,
   bmi: function () {
-    return this.weight / (this.height * this.height);
+    return (this.weight / (this.height * this.height)).toFixed(2);
   }
 };
 
@@ -157,7 +157,7 @@ let Mark = {
   weight: 90,
   fakeBMI: 29,
   bmi: function () {
-    return this.weight / (this.height * this.height);
+    return (this.weight / (this.height * this.height)).toFixed(2);
   }
 };
 
