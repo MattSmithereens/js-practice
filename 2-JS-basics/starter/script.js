@@ -200,3 +200,41 @@
 //   i++;
 // };
 
+// Coding Challenge #5
+
+let tipArray = [];
+let totalBill = [];
+let billSum = 0;
+let average = 0;
+let bills = [124, 48, 268, 180, 142];                   //initialize bill array
+
+let calculateTip = function (bill) {          //initialize function and pass bill argument//
+  let percentage;                             //initialize percentage variable
+  if (bill > 0 && bill <= 50) {
+    percentage = .2;
+  } else if (bill > 50 && bill < 200) {
+    percentage = .15;
+  } else if (bill >= 200) {
+    percentage = .1;
+  } else {
+    alert('nope' + i);
+  }
+  return bill * percentage;
+}
+let sum;
+let calculateAverage = function (totalBill) {
+  for (var i = 0; i < bills.length; i++) {
+    sum += (bills[i], bills.length); //don't forget to add the base
+  }
+  return sum;
+}
+
+for (var i = 0; i < bills.length; i++) {
+  tipArray.push(parseFloat(calculateTip(bills[i]).toFixed(2)));
+  totalBill.push(bills[i] + (parseFloat(calculateTip(bills[i]).toFixed(2))));
+  average = (billSum += totalBill[i]) / bills.length;
+};
+
+console.log('Tips = ' + tipArray);
+console.log('Total Bill = ' + totalBill);
+console.log('Average bill = ' + average);
