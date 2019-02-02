@@ -221,13 +221,6 @@ let calculateTip = function (bill) {          //initialize function and pass bil
   }
   return bill * percentage;
 }
-let sum;
-let calculateAverage = function (totalBill) {
-  for (var i = 0; i < bills.length; i++) {
-    sum += (bills[i], bills.length); //don't forget to add the base
-  }
-  return sum;
-}
 
 for (var i = 0; i < bills.length; i++) {
   tipArray.push(parseFloat(calculateTip(bills[i]).toFixed(2)));
