@@ -139,37 +139,64 @@
 
 //Quiz #4: objects
 
-let John = {
-  first: 'John',
-  last: 'Holmes',
-  height: 1.78,
-  weight: 82,
-  fakeBMI: 28,
-  bmi: function () {
-    return (this.weight / (this.height * this.height)).toFixed(2);
-  }
-};
+// let John = {
+//   first: 'John',
+//   last: 'Holmes',
+//   height: 1.78,
+//   weight: 82,
+//   fakeBMI: 28,
+//   bmi: function () {
+//     return (this.weight / (this.height * this.height)).toFixed(2);
+//   }
+// };
 
-let Mark = {
-  first: 'Marky',
-  last: 'Mark',
-  height: 1.84,
-  weight: 90,
-  fakeBMI: 29,
-  bmi: function () {
-    return (this.weight / (this.height * this.height)).toFixed(2);
-  }
-};
+// let Mark = {
+//   first: 'Marky',
+//   last: 'Mark',
+//   height: 1.84,
+//   weight: 90,
+//   fakeBMI: 29,
+//   bmi: function () {
+//     return (this.weight / (this.height * this.height)).toFixed(2);
+//   }
+// };
 
-let BMICompare = function () {
-  if (John.bmi() > Mark.bmi()) {
-    return John.first + '' + John.last + ' has a larger BMI since his is ' + John.bmi();
-  }
-  else {
-    return Mark.first + '' + Mark.last + ' has a larger BMI since his is ' + Mark.bmi();
-  }
-}
+// let BMICompare = function () {
+//   if (John.bmi() > Mark.bmi()) {
+//     return John.first + ' ' + John.last + ' has a larger BMI since his is ' + John.bmi();
+//   }
+//   else {
+//     return Mark.first + ' ' + Mark.last + ' has a larger BMI since his is ' + Mark.bmi();
+//   }
+// }
 
-console.log('John BMI ' + John.bmi());
-console.log('Mark BMI ' + Mark.bmi());
-console.log(BMICompare(John, Mark));
+// console.log('John BMI ' + John.bmi());
+// console.log('Mark BMI ' + Mark.bmi());
+// console.log(BMICompare(John, Mark));
+
+// Loops
+
+// for (var i = 0; i < 10; i++) {    // for each variable starting with 0 and ending in 9, count up by 1
+//   console.log(i);
+// }
+
+// let john = [
+//   'John',
+//   'Smith',
+//   1990,
+//   'designer',
+//   'another element'
+// ]
+
+// // for loop
+// // for (var i = 0; i < john.length; i++) {   // for each element in john starting at 0, as long as it's less than the length of array 'john' increment up by 1
+// //   console.log(john[i]);
+// // }
+
+// // while loop
+// var i = 0;
+// while (i < john.length) {
+//   console.log(john[i]);
+//   i++;
+// };
+
