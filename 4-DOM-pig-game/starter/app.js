@@ -18,4 +18,12 @@ dice = Math.floor(Math.random() * 6) + 1;
 
 console.log(dice);
 
-document.querySelector('#current-0').textContent = dice;
+// document.querySelector('#current-' + activePlayer).textContent = dice;
+// selects "current-" object in document and passes value as text, ie textContent.  textContent cannot pass HTML
+
+document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+// passing interpretable HTML value
+// this method takes a generated random number (dice) and passes it into the DOM
+
+document.querySelector('.dice').style.display = 'none';
+// initially do not render dice image
