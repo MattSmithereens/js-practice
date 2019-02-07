@@ -9,21 +9,34 @@ GAME RULES:
 
 */
 
-let scores, roundScore, activePlayer, dice;
+let scores, roundScore, activePlayer;
 
 scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
-dice = Math.floor(Math.random() * 6) + 1;
 
-console.log(dice);
+// initially do not render dice image
+document.querySelector('.dice').style.display = 'none';
+
+// initially set scores to zero according to id
+document.getElementById('score-0').textContent = '0'
+document.getElementById('score-1').textContent = '0'
+document.getElementById('current-0').textContent = '0'
+document.getElementById('current-1').textContent = '0'
+
+document.querySelector('.btn-roll').addEventListener('click', function () {
+  let dice = Math.floor(Math.random() * 6) + 1;
+  let diceDOM = document.querySelector('.dice');
+  diceDOM.style.display = 'block';
+  diceDOM.src = 'dice-' + dice + '.png';
+})
+
+
+
 
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 // selects "current-" object in document and passes value as text, ie textContent.  textContent cannot pass HTML
 
-document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
 // passing interpretable HTML value
 // this method takes a generated random number (dice) and passes it into the DOM
-
-document.querySelector('.dice').style.display = 'none';
-// initially do not render dice image
